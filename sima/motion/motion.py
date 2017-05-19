@@ -247,6 +247,7 @@ def _observation_counts(raw_shape, displacements, untrimmed_shape):
             d = list(displacements[plane])
             if len(d) == 2:
                 d = [0] + d
+            d = map(int, d)
             cnt[plane + d[0],
                 d[1]:(d[1] + raw_shape[1]),
                 d[2]:(d[2] + raw_shape[2])] += 1
